@@ -1,0 +1,4 @@
+zig-cache
+build
+client
+server

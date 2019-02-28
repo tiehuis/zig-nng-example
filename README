@@ -1,0 +1,21 @@
+Simple async server/client example using [nng](https://github.com/nanomsg/nng).
+
+## Dependencies
+
+ - C
+ - Make
+ - CMake
+ - [Zig](https://github.com/ziglang/zig)
+
+## Installation
+
+```
+make
+```
+
+## Running
+
+Use the `run.sh` script for a simple example of 32 clients. This uses an ipc
+pipe for communication. You can use a tcp socket via `tcp://127.0.0.1:5050`
+or similar. See the [nng documentation](https://nanomsg.github.io/nng/man/v1.1.0/index.html#_section_7_protocols_and_transports)
+for the different transports available.
