@@ -58,8 +58,8 @@ pub fn request(address: [*]const u8, msec: u32) void {
 
 pub fn main() !void {
     var allocator = std.heap.c_allocator;
-    var args = try std.os.argsAlloc(allocator);
-    defer std.os.argsFree(allocator, args);
+    var args = try std.process.argsAlloc(allocator);
+    defer std.process.argsFree(allocator, args);
 
     if (args.len <= 2) {
         std.debug.warn("usage: {} <url> <msec>\n", args[0]);

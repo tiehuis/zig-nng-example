@@ -140,8 +140,8 @@ const parallel_count = 128;
 
 pub fn main() !void {
     var allocator = std.heap.c_allocator;
-    var args = try std.os.argsAlloc(allocator);
-    defer std.os.argsFree(allocator, args);
+    var args = try std.process.argsAlloc(allocator);
+    defer std.process.argsFree(allocator, args);
 
     if (args.len <= 1) {
         std.debug.warn("usage: {} <url>\n", args[0]);
